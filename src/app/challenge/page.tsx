@@ -1,5 +1,3 @@
-import CardList from "../components/card-list";
-
 async function getData() {
   const res = await fetch('http://localhost:3000/api');
 
@@ -17,7 +15,6 @@ export default async function Challenge() {
     <main className="flex text-black font-serif min-h-screen flex-col  items-start justify-start p-4 w-full">
       <h1 className="text-4xl font-bold text-center">The Challenge</h1>
       <div className="flex flex-row flex-wrap gap-4">
-        <CardList data={data} />
       </div> 
     </main>
   )
