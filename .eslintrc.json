@@ -1,3 +1,251 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "ignorePatterns": [
+    "**/*"
+  ],
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "import/no-dynamic-require": "off",
+    "implicit-arrow-linebreak": "off",
+    "react/no-array-index-key": "warn",
+    "max-len": "off",
+    "func-names": "off",
+    "no-alert": "error",
+    "template-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "import/prefer-default-export": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "!**/*",
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        "no-console": [
+          "error",
+          {
+            "allow": [
+              "warn",
+              "error"
+            ]
+          }
+        ],
+        "no-self-compare": "off",
+        "no-confusing-arrow": "off",
+        "object-curly-newline": [
+          "error",
+          {
+            "consistent": true
+          }
+        ],
+        "@typescript-eslint/object-curly-spacing": [
+          "error",
+          "always",
+          {
+            "arraysInObjects": false,
+            "objectsInObjects": false
+          }
+        ],
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [
+              "@falcon/*",
+              "@ui-types/*",
+              "@helpers/*",
+              "@abacus/*",
+              "@api/*"
+            ],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": [
+                  "*"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "!**/*",
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:@nrwl/nx/typescript"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": true
+          }
+        ],
+        "global-require": "off",
+        "max-len": "off",
+        "import/extensions": [
+          "off",
+          "never"
+        ]
+      }
+    },
+    {
+      "files": [
+        "!**/*",
+        "*.js",
+        "*.jsx"
+      ],
+      "extends": [
+        "plugin:@nrwl/nx/javascript"
+      ],
+      "rules": {
+        "global-require": "off"
+      }
+    },
+    {
+      "files": [
+        "*.jsx",
+        "*.tsx"
+      ],
+      "plugins": [
+        "data-test"
+      ],
+      "extends": [
+        "plugin:react/recommended"
+      ],
+      "rules": {
+        "data-test/anchor": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/button": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/input": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/onChange": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/onClick": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/onKeyDown": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/onKeyUp": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/onSubmit": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "data-test/Link": [
+          "error",
+          "always",
+          {
+            "ignore": [
+              "FontAwesomeIcon",
+              "FAIcon"
+            ],
+            "ignorePattern": ".*Input"
+          }
+        ],
+        "react-hooks/exhaustive-deps": "off",
+        "react/require-default-props": "off",
+        "jsx-a11y/label-has-associated-control": [
+          "error",
+          {
+            "assert": "either"
+          }
+        ],
+        "react/jsx-one-expression-per-line": "off"
+      }
+    },
+    {
+      "files": [
+        "*.spec.*"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }

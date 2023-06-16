@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+# HomeTown Ticketing | UI Developer Challenge
 ## Getting Started
 
-First, run the development server:
+First, install packages:
+
+```bash
+npm install
+```
+
+Create a branch that you will push your changes up on:
+
+```bash
+git checkout -b lastname-firstname-challenge
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can find the instructions for the challenge on this main instructions page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Follow the instructions to the best of your ability. If you want to explain your thinking or approach please comment in the code your explainations where they apply.
 
-## Learn More
+## Once Finished
 
-To learn more about Next.js, take a look at the following resources:
+Once you are done with the challenge push your changes up to origin on the branch that you have created.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then come back to this repository and create a pull request from your branch into main.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Finally, let your HR contact that you have finished the challenge.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Good luck, you've prepared for this, just do your best!
