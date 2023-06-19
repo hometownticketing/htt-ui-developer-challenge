@@ -1,3 +1,5 @@
+import { CardsContainer } from '../components';
+
 async function getData() {
   const res = await fetch('http://localhost:3000/api');
 
@@ -9,13 +11,12 @@ async function getData() {
 }
 
 export default async function Challenge() {
-  const data = await getData();
+  const userData = await getData();
 
   return (
-    <main className="flex text-black font-serif min-h-screen flex-col  items-start justify-start p-4 w-full">
-      <h1 className="text-4xl font-bold text-center">The Challenge</h1>
-      <div className="flex flex-row flex-wrap gap-4">
-      </div> 
+    <main className="text-black font-serif min-h-screen p-4 w-full">
+      <h1 className="text-4xl font-bold mb-4">The Challenge</h1>
+      <CardsContainer userData={userData} />
     </main>
   )
 }
