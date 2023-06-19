@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const linkClassNames = 'text-primary hover:text-primary-dark hover:underline';
 
-export default function Header() {
+export const Header = () => {
   return (
     <header className="flex flex-row items-center justify-between bg-primary-light py-2 px-4 w-full border-b-primary border-b-2">
       <h1 className="text-3xl font-serif font-bold text-primary flex flex-row items-center">
@@ -17,3 +17,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header
