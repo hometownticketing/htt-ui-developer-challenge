@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { MouseEvent, useState } from "react";
 
 import Card from "@/app/components/card";
 
@@ -20,7 +20,8 @@ interface ResultListProps {
 export default function Results({ data }: ResultListProps) {
   const [activeCardId, setActiveCardId] = useState<string | undefined>();
 
-  const handleClick = (itemId: string) => {
+  const handleClick = (e: MouseEvent<HTMLElement>, itemId: string) => {
+    e.preventDefault();
     setActiveCardId(itemId);
   };
 
@@ -49,8 +50,8 @@ export default function Results({ data }: ResultListProps) {
           link="#"
           isActive={activeCardId === item.id}
           className={"h-full"}
-          onClick={() => {
-            handleClick(item.id);
+          onClick={(e) => {
+            handleClick(e, item.id);
           }}
         />
       ))}
