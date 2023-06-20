@@ -50,8 +50,10 @@ export default function Card({
   return (
     <div
       className={classNames(
-        "flex flex-wrap border-2 border-gray-dark rounded-md mt-6 text-gray-dark dark:border-gray-cool dark:text-white hover:border-danger",
-        isActive && "bg-danger-medium",
+        "flex flex-wrap border-2 rounded-md mt-6 text-gray-dark dark:text-white hover:border-danger",
+        isActive
+          ? "bg-danger-medium border-danger"
+          : "border-gray-dark dark:border-gray-cool",
         className
       )}
       id={cardId}
