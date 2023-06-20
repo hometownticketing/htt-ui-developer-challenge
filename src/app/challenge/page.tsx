@@ -1,5 +1,7 @@
+const apiUrl = process.env.BASE_PATH || "http://localhost:3000";
+
 async function getData() {
-  const res = await fetch('http://localhost:3000/api');
+  const res = await fetch(`${apiUrl}/api`);
 
   if (!res.ok) {
     throw new Error(res.statusText);
