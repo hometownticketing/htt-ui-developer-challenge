@@ -51,8 +51,8 @@ export default function Card({
     <div
       className={classNames(
         "flex flex-wrap border-2 border-gray-dark rounded-md mt-6 text-gray-dark dark:border-gray-cool dark:text-white hover:border-danger",
-        className,
-        isActive && "bg-danger-medium"
+        isActive && "bg-danger-medium",
+        className
       )}
       id={cardId}
       data-test="card"
