@@ -1,7 +1,11 @@
 # HomeTown Ticketing | UI Developer Challenge
 ## Getting Started
 
-First, install packages:
+First, fork this repository to your github account.
+
+Then clone the repo for development.
+
+Next, install:
 
 ```bash
 npm install
@@ -27,9 +31,9 @@ Follow the instructions to the best of your ability. If you want to explain your
 
 ## Once Finished
 
-Once you are done with the challenge push your changes up to origin on the branch that you have created.
+Once you are done with the challenge push your changes up to origin of your forked repository on the branch that you have created.
 
-Then come back to this repository and create a pull request from your branch into main.
+Then create a pull request from your branch on your forked repository into main on the HomeTown Ticketing repository.
 
 Finally, let your HR contact that you have finished the challenge.
 
