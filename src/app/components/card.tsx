@@ -90,7 +90,7 @@ export default function Card({
               {subTitle && (
                 <h3
                   className={classNames(
-                    "w-full text-base font-semibold capitalize ",
+                    "w-full text-base font-semibold capitalize",
                     isActive ? "text-white" : "text-gray-cool"
                   )}
                 >
@@ -110,7 +110,7 @@ export default function Card({
         <a
           href={link}
           className={classNames(
-            "relative flex flex-row pb-0 pr-5 font-normal leading-none capitalize border-b-2 border-transparent cursor-pointer hover:border-black text-gray-dark ",
+            "relative flex flex-row pb-0 pr-5 font-normal leading-none capitalize border-b-2 border-transparent cursor-pointer hover:border-black text-gray-dark",
             isActive ? "hover:text-white" : "hover:text-danger"
           )}
           data-test={dataTest}
