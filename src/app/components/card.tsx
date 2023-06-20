@@ -1,6 +1,6 @@
 "use client";
 
-import React, { PropsWithChildren, useCallback } from "react";
+import React, { MouseEvent, PropsWithChildren, useCallback } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 
@@ -16,7 +16,7 @@ export interface CardInterface extends PropsWithChildren {
   quantity?: number;
   link?: string;
   linkText: string;
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (e: MouseEvent<HTMLElement>) => void;
   dataTest?: string;
   isActive?: boolean;
 }
@@ -41,7 +41,7 @@ export default function Card({
   const cardId = `${id}`;
 
   const onClickAction = useCallback(
-    (e: React.MouseEvent<HTMLElement>) => {
+    (e: MouseEvent<HTMLElement>) => {
       onClick && onClick(e);
     },
     [onClick]
