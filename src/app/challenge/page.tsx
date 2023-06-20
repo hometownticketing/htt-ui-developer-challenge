@@ -1,3 +1,5 @@
+import Results from "./components/ResultsList";
+
 const apiUrl = process.env.BASE_PATH || "http://localhost:3000";
 
 async function getData() {
@@ -14,10 +16,9 @@ export default async function Challenge() {
   const data = await getData();
 
   return (
-    <main className="flex text-black font-serif min-h-screen flex-col  items-start justify-start p-4 w-full">
+    <main className="flex flex-col items-start justify-start w-full min-h-screen p-4 font-serif text-black">
       <h1 className="text-4xl font-bold text-center">The Challenge</h1>
-      <div className="flex flex-row flex-wrap gap-4">
-      </div> 
+      <Results data={data} />
     </main>
-  )
+  );
 }
