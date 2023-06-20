@@ -36,7 +36,7 @@ export default function Results({ data }: ResultListProps) {
 
   return (
     <div className="grid grid-cols-2 gap-4 mb-8">
-      {data?.map((item: DataItem) => (
+      {data.map((item: DataItem) => (
         <Card
           key={item.id}
           id={item.id}
