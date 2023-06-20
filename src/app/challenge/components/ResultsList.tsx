@@ -47,7 +47,7 @@ export default function Results({ data }: ResultListProps) {
           bodyText={item.description}
           linkText="See Profile"
           link="#"
-          isActive={activeCardId && activeCardId === item.id ? true : false}
+          isActive={activeCardId === item.id}
           className={"h-full"}
           onClick={() => {
             handleClick(item.id);
