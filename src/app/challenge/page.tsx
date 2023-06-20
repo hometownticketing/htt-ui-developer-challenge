@@ -10,6 +10,9 @@ async function getData() {
   return res.json();
 }
 
+// Working on the assumption the data will exist. 
+// TODO: add an empty state
+// TODO: Responsive design. Only handled desktop since responsive design was seemingly not part of the requirements
 export default async function Challenge() {
   const userData = await getData();
 
