@@ -112,8 +112,10 @@ export default function Card({
         <a
           href={link}
           className={classNames(
-            "relative flex flex-row pb-0 pr-5 font-normal leading-none capitalize border-b-2 border-transparent cursor-pointer hover:border-black text-gray-dark",
-            isActive ? "hover:text-white" : "hover:text-danger"
+            "relative flex flex-row pb-0 pr-5 font-normal leading-none capitalize border-b-2 border-transparent cursor-pointer hover:border-black ",
+            isActive
+              ? "text-white hover:text-white"
+              : "text-gray-dark hover:text-danger"
           )}
           data-test={dataTest}
           {...(link === "#" && onClick && { onClick: onClickAction })}

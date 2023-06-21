@@ -38,22 +38,25 @@ export default function Results({ data }: ResultListProps) {
   return (
     <div className="grid grid-cols-2 gap-4 mb-8">
       {data.map((item: DataItem) => (
-        <Card
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          title={item.role}
-          subTitle={item.bio}
-          image={item.image}
-          bodyText={item.description}
-          linkText="See Profile"
-          link="#"
-          isActive={activeCardId === item.id}
-          className={"h-full"}
+        <div
           onClick={(e) => {
             handleClick(e, item.id);
           }}
-        />
+        >
+          <Card
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            title={item.role}
+            subTitle={item.bio}
+            image={item.image}
+            bodyText={item.description}
+            linkText="See Profile"
+            link="#"
+            isActive={activeCardId === item.id}
+            className={"h-full"}
+          />
+        </div>
       ))}
     </div>
   );
