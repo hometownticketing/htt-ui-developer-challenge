@@ -39,12 +39,12 @@ export default function Results({ data }: ResultListProps) {
     <div className="grid grid-cols-2 gap-4 mb-8">
       {data.map((item: DataItem) => (
         <div
+          key={item.id}
           onClick={(e) => {
             handleClick(e, item.id);
           }}
         >
           <Card
-            key={item.id}
             id={item.id}
             name={item.name}
             title={item.role}
