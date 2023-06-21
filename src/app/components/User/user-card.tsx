@@ -25,15 +25,16 @@ const UserCard = memo(function UserCard({ user, activeUser, setSelectedUser }: U
       // Adding data-test attributes for easier hooks into specific elements during testing.
       data-test="user-card"
     >
-      <div className="mt-4 ml-4 whitespace-pre">
+      <div className="mt-8 ml-4 -mb-8 whitespace-pre">
         <span className="text-xl font-bold text-gray-600">{user.name}</span>
       </div>
       <div className="flex flex-row ml-4">
-        <div className="relative w-20 h-20 mt-4 min-w-20">
+        <div className="relative w-20 h-20 mt-10 min-w-20">
             <Image
               src={user.image}
               alt="User Profile Image"
               fill={true}
+              sizes="(max-width: 5rem) 100vw"
               data-test="user-image"
             />
         </div>
