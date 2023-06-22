@@ -3,6 +3,7 @@
 import React, { MouseEvent, PropsWithChildren, useCallback } from "react";
 import Image from "next/image";
 import classNames from "classnames";
+import noop from "../lib/noop";
 
 export interface CardInterface extends PropsWithChildren {
   className?: string;
@@ -34,17 +35,17 @@ export default function Card({
   quantity = 0,
   link = "#",
   linkText,
-  onClick,
+  onClick: providedOnClick = noop,
   dataTest,
   isActive = false,
 }: CardInterface) {
   const cardId = `${id}`;
 
-  const onClickAction = useCallback(
-    (e: MouseEvent<HTMLElement>) => {
-      onClick && onClick(e);
+  const onClick = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      providedOnClick(e);
     },
-    [onClick]
+    [providedOnClick]
   );
 
   return (
@@ -119,7 +120,7 @@ export default function Card({
                 : "text-gray-dark hover:text-danger"
             )}
             data-test={dataTest}
-            {...(link === "#" && onClick && { onClick: onClickAction })}
+            {...(link === "#" && onClick && { onClick: onClick })}
           >
             {linkText}
             <span
