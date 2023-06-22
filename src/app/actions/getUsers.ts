@@ -1,6 +1,8 @@
+import { DataItem } from "../types";
+
 const apiUrl = process.env.BASE_PATH || "http://localhost:3000";
 
-const getUsers = async () => {
+const getUsers = async (): Promise<DataItem[]> => {
   try {
     const res = await fetch(`${apiUrl}/api`);
 
