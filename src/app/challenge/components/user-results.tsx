@@ -15,7 +15,12 @@ export default function UserResults({ users }: UserResultsProps) {
 
   const handleCardClick = (e: MouseEvent<HTMLElement>, itemId: string) => {
     e.preventDefault();
-    setActiveCardId(itemId);
+    if (activeCardId === itemId) {
+      // toggle off
+      setActiveCardId(undefined);
+    } else {
+      setActiveCardId(itemId);
+    }
   };
 
   if (users.length === 0) {
