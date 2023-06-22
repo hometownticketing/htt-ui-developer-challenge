@@ -1,8 +1,9 @@
 import getUsers from "../actions/getUsers";
+import { DataItem } from "../types";
 import Results from "./components/ResultsList";
 
 export default async function Challenge() {
-  const data = await getUsers();
+  const data: DataItem[] = await getUsers();
 
   return (
     <main className="flex flex-col items-start justify-start w-full min-h-screen p-4 font-serif text-black">

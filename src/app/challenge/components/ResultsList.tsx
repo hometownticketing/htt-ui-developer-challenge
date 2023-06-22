@@ -3,15 +3,7 @@
 import React, { MouseEvent, useState } from "react";
 
 import Card from "@/app/components/card";
-
-type DataItem = {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  description: string;
-};
+import { DataItem } from "@/app/types";
 
 interface ResultListProps {
   data: DataItem[];
