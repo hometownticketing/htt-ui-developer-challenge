@@ -100,6 +100,7 @@ export default function Card({
                 </h3>
               )}
               <p className="text-base text-black">{bodyText}</p>
+              {children}
             </div>
           </div>
         </div>
