@@ -72,8 +72,8 @@ export default function Card({
             </h1>
           )}
           <div className="flex flex-row w-full">
-            {image && (
-              <div className="flex-none w-20">
+            <div className="flex-none w-20">
+              {image && (
                 <Image
                   src={image}
                   width="80"
@@ -81,8 +81,8 @@ export default function Card({
                   alt={name ? name : ""}
                   className="block w-20"
                 />
-              </div>
-            )}
+              )}
+            </div>
             <div className="flex-1 ml-4">
               {title && (
                 <h2 className="w-full text-base font-bold capitalize headline text-primary">
@@ -100,7 +100,6 @@ export default function Card({
                 </h3>
               )}
               <p className="text-base text-black">{bodyText}</p>
-              {children}
             </div>
           </div>
         </div>
