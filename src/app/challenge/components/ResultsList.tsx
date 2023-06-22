@@ -17,13 +17,11 @@ export default function Results({ data }: ResultListProps) {
     setActiveCardId(itemId);
   };
 
-  if (!data) {
+  if (!data || data.length === 0) {
     return (
-      <main className="flex flex-col items-center justify-center w-full min-h-screen p-4 font-serif text-black">
-        <h1 className="w-full mb-2 text-xl font-bold text-center capitalize headline text-gray-dark">
-          No results found
-        </h1>
-      </main>
+      <span className="w-full mt-20 mb-2 text-xl font-bold text-center capitalize headline text-gray-dark">
+        No results found
+      </span>
     );
   }
 
