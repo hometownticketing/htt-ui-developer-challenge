@@ -1,8 +1,8 @@
 import { faker } from "@faker-js/faker";
 import { NextRequest, NextResponse } from "next/server";
-import { DataItem } from "../types";
+import type { User } from "../types";
 
-function generatePerson(): DataItem {
+function generatePerson(): User {
   return {
     id: faker.string.uuid(),
     name: faker.person.fullName(),
@@ -14,7 +14,7 @@ function generatePerson(): DataItem {
 }
 
 export async function GET(request: NextRequest) {
-  const data: DataItem[] = Array(20)
+  const data: User[] = Array(20)
     .fill(null)
     .map(() => generatePerson());
 
