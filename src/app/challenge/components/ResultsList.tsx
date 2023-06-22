@@ -46,9 +46,7 @@ export default function Results({ data }: ResultListProps) {
             isActive={activeCardId === item.id}
             className={"h-full"}
             dataTest={`card-link-${item.id}`}
-          >
-            <div>Some child data</div>
-          </Card>
+          />
         </div>
       ))}
     </div>
